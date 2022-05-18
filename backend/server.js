@@ -7,6 +7,10 @@ dotEnv.config({ path: "backend/config/config.env" });
 // connecting to database
 connectDatabase();
 
+// app.listen(process.env.PORT, () => {
+//   console.log(`Server is running on http://localhost:${process.env.PORT}`);
+// });
+
 app.listen(process.env.PORT, () => {
-  console.log(`Server is running on http://localhost:${process.env.PORT}`);
+  console.log(`Server is running on http://localhost:4000`);
 });
