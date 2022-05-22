@@ -1,10 +1,9 @@
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncError = require("../middleware/catchAsyncError");
-
 const User = require("../models/userModels");
 const sendToken = require("../utils/jwtToken");
 
-// Register a user
+// Register a User
 exports.registerUser = catchAsyncError(async (req, res, next) => {
   const { name, email, password } = req.body;
   const user = await User.create({
